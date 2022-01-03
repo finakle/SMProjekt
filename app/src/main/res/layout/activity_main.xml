@@ -152,7 +152,7 @@
 
 
             <ScrollView
-                android:id="@+id/scroll"
+                android:id="@+id/scrollStats"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -180,6 +180,322 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
                         android:background="@color/color_two" />
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Przypadki"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/tvPrzypadki"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif-light"
+                            android:text="0"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_one"
+                            android:textSize="18sp"
+
+                            android:textStyle="bold" />
+
+
+
+
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/color_two" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Wyzdrowiali"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/tvWyzdrowiali"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif-light"
+                            android:text="0"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_one"
+                            android:textSize="18sp"
+
+                            android:textStyle="bold" />
+
+
+
+
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/color_two" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Krytycznie chorzy"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/tvKrytyczni"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif-light"
+                            android:text="0"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_one"
+                            android:textSize="18sp"
+
+                            android:textStyle="bold" />
+
+
+
+
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/color_two" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Chorzy"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/tvChorzy"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif-light"
+                            android:text="0"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_one"
+                            android:textSize="18sp"
+
+                            android:textStyle="bold" />
+
+
+
+
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/color_two" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Dzisiejsze przypadki"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/tvDzisiejszePrzypadki"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif-light"
+                            android:text="0"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_one"
+                            android:textSize="18sp"
+
+                            android:textStyle="bold" />
+
+
+
+
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/color_two" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Zgony"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/tvZgony"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif-light"
+                            android:text="0"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_one"
+                            android:textSize="18sp"
+
+                            android:textStyle="bold" />
+
+
+
+
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/color_two" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Dzisiejsze zgony"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/tvDzisiejszeZgony"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif-light"
+                            android:text="0"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_one"
+                            android:textSize="18sp"
+
+                            android:textStyle="bold" />
+
+
+
+
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/color_two" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Dotknięte państwa"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/tvDotknietePanstwa"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif-light"
+                            android:text="0"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_one"
+                            android:textSize="18sp"
+
+                            android:textStyle="bold" />
+
+
+
+
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/color_two" />
+
 
 
                 </LinearLayout>
