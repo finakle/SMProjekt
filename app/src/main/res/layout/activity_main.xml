@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
 
-<!--    tutaj robie pole dla wykresu-->
+    <!--    tutaj robie pole dla wykresu-->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="180dp"
@@ -127,15 +127,66 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/cardViewGraf"
         android:layout_above="@+id/buttonKraj"
+        android:layout_below="@+id/cardViewGraf"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="5dp"
-
         >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <com.leo.simplearcloader.SimpleArcLoader
+                android:visibility="gone"
+                android:id="@+id/loader"
+                android:layout_centerInParent="true"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:arc_style="simple_arc"
+                >
+            </com.leo.simplearcloader.SimpleArcLoader>
+
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <!--                    statystyki globalne-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="20dp"
+                        android:text="statystyki globalne"
+                        android:textAllCaps="true"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/color_two" />
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
