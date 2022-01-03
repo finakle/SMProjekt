@@ -8,6 +8,8 @@
     tools:context=".MainActivity">
 
 
+<!--    komentarz na sprawdzenie-->
+
     <!--    tutaj robie pole dla wykresu-->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
