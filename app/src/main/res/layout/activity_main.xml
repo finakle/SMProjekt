@@ -8,9 +8,6 @@
     tools:context=".MainActivity">
 
 
-<!--    komentarz na sprawdzenie-->
-
-    <!--    tutaj robie pole dla wykresu-->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="180dp"
@@ -18,7 +15,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         app:cardElevation="10dp"
-        android:id="@+id/cardViewGraf"
+        android:id="@+id/cardViewGraph"
         app:cardCornerRadius="5dp">
 
         <LinearLayout
@@ -47,93 +44,83 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
+                    android:layout_height="15dp"
                     android:gravity="center_vertical">
-
                     <View
                         android:layout_width="15dp"
                         android:layout_height="match_parent"
-                        android:background="@color/przypadki"/>
-
+                        android:background="@color/cases"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Łączna Liczba chorych"
-                        android:paddingLeft="5dp"/>
+                        android:text="Total Cases"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
+                    android:layout_height="15dp"
                     android:gravity="center_vertical"
                     android:layout_marginTop="5dp">
-
                     <View
                         android:layout_width="15dp"
                         android:layout_height="match_parent"
-                        android:background="@color/wyzdrowiali"/>
-
+                        android:background="@color/recovered"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wyzdrowiali"
-                        android:paddingLeft="5dp"/>
+                        android:text="Recovered"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
+                    android:layout_height="15dp"
                     android:gravity="center_vertical"
                     android:layout_marginTop="5dp">
-
                     <View
                         android:layout_width="15dp"
                         android:layout_height="match_parent"
-                        android:background="@color/zgony"
-                        />
-
+                        android:background="@color/deaths"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Zgony"
-                        android:paddingLeft="5dp"/>
+                        android:text="Deaths"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
+                    android:layout_height="15dp"
                     android:gravity="center_vertical"
                     android:layout_marginTop="5dp">
-
                     <View
                         android:layout_width="15dp"
                         android:layout_height="match_parent"
-                        android:background="@color/chorzy"/>
-
+                        android:background="@color/active"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chorzy"
-                        android:paddingLeft="5dp"/>
+                        android:text="Active"
+                        android:paddingLeft="10dp"/>
 
                 </LinearLayout>
-
-
             </LinearLayout>
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
 
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_above="@+id/buttonKraj"
-        android:layout_below="@+id/cardViewGraf"
+        android:layout_below="@+id/cardViewGraph"
+        android:layout_above="@+id/btnTrack"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="5dp"
         >
@@ -152,11 +139,10 @@
                 >
             </com.leo.simplearcloader.SimpleArcLoader>
 
-
             <ScrollView
-                android:id="@+id/scrollStats"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:id="@+id/scrollStats"
                 android:visibility="gone">
 
                 <LinearLayout
@@ -164,342 +150,302 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-
-                    <!--                    statystyki globalne-->
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginTop="20dp"
-                        android:text="statystyki globalne"
+                        android:text="global stats"
                         android:textAllCaps="true"
                         android:textSize="28sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="20dp"/>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:background="@color/color_two"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
-                        android:background="@color/color_two" />
-
-
-
+                        android:layout_marginTop="5dp"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="25dp"
                         android:layout_marginLeft="25dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
-                            android:text="Przypadki"
+                            android:text="Cases"
                             android:textSize="18sp"/>
-
                         <TextView
-                            android:id="@+id/tvPrzypadki"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
                             android:text="0"
+                            android:id="@+id/tvCases"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
                             android:textSize="18sp"
 
-                            android:textStyle="bold" />
-
-
-
-
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:background="@color/color_two"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:background="@color/color_two" />
-
+                        />
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="25dp"
                         android:layout_marginLeft="25dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
-                            android:text="Wyzdrowiali"
+                            android:text="Recovored"
                             android:textSize="18sp"/>
-
                         <TextView
-                            android:id="@+id/tvWyzdrowiali"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
                             android:text="0"
+                            android:id="@+id/tvRecovered"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
                             android:textSize="18sp"
-
-                            android:textStyle="bold" />
-
-
-
-
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:background="@color/color_two"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:background="@color/color_two" />
-
+                        />
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="25dp"
                         android:layout_marginLeft="25dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
-                            android:text="Krytycznie chorzy"
+                            android:text="Critical"
                             android:textSize="18sp"/>
-
                         <TextView
-                            android:id="@+id/tvKrytyczni"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
                             android:text="0"
+                            android:id="@+id/tvCritical"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
                             android:textSize="18sp"
 
-                            android:textStyle="bold" />
-
-
-
-
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:background="@color/color_two"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:background="@color/color_two" />
-
+                        />
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="25dp"
                         android:layout_marginLeft="25dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
-                            android:text="Chorzy"
+                            android:text="Active"
                             android:textSize="18sp"/>
-
                         <TextView
-                            android:id="@+id/tvChorzy"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
                             android:text="0"
+                            android:id="@+id/tvActive"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
                             android:textSize="18sp"
 
-                            android:textStyle="bold" />
-
-
-
-
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:background="@color/color_two"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:background="@color/color_two" />
-
+                        />
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="25dp"
                         android:layout_marginLeft="25dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
-                            android:text="Dzisiejsze przypadki"
+                            android:text="Today Cases"
                             android:textSize="18sp"/>
-
                         <TextView
-                            android:id="@+id/tvDzisiejszePrzypadki"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
                             android:text="0"
+                            android:id="@+id/tvTodayCases"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
                             android:textSize="18sp"
 
-                            android:textStyle="bold" />
-
-
-
-
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:background="@color/color_two"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:background="@color/color_two" />
-
+                        />
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="25dp"
                         android:layout_marginLeft="25dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
-                            android:text="Zgony"
+                            android:text="Total Deaths"
                             android:textSize="18sp"/>
-
                         <TextView
-                            android:id="@+id/tvZgony"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
                             android:text="0"
+                            android:id="@+id/tvTotalDeaths"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
                             android:textSize="18sp"
 
-                            android:textStyle="bold" />
-
-
-
-
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:background="@color/color_two"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:background="@color/color_two" />
-
+                        />
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="25dp"
                         android:layout_marginLeft="25dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
-                            android:text="Dzisiejsze zgony"
+                            android:text="Today Deaths"
                             android:textSize="18sp"/>
-
                         <TextView
-                            android:id="@+id/tvDzisiejszeZgony"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
                             android:text="0"
+                            android:id="@+id/tvTodayDeaths"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
                             android:textSize="18sp"
 
-                            android:textStyle="bold" />
-
-
-
-
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:background="@color/color_two"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:background="@color/color_two" />
-
+                        />
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="25dp"
                         android:layout_marginLeft="25dp"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
-                            android:text="Dotknięte państwa"
+                            android:text="Affected Countries"
                             android:textSize="18sp"/>
-
                         <TextView
-                            android:id="@+id/tvDotknietePanstwa"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
                             android:text="0"
+                            android:id="@+id/tvAffectedCountries"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
                             android:textSize="18sp"
-
-                            android:textStyle="bold" />
-
-
-
-
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:background="@color/color_two"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:background="@color/color_two" />
-
-
+                        />
 
                 </LinearLayout>
 
@@ -507,23 +453,22 @@
 
         </RelativeLayout>
 
+
     </androidx.cardview.widget.CardView>
 
 
-
     <Button
-        android:id="@+id/buttonKraj"
+        android:id="@+id/btnTrack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
         android:background="@color/color_one"
-        android:text="wybierz państwo"
+        android:text="Track countries"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:padding="5dp"
-        android:onClick="wybierzKraj"
-        />
+        android:onClick="goTrackCountries"/>
 
 
 </RelativeLayout>
