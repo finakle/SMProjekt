@@ -143,7 +143,7 @@
             android:layout_height="match_parent"
             >
             <com.leo.simplearcloader.SimpleArcLoader
-                android:visibility="gone"
+                android:visibility="visible"
                 android:id="@+id/loader"
                 android:layout_centerInParent="true"
                 android:layout_width="60dp"
@@ -156,7 +156,8 @@
             <ScrollView
                 android:id="@+id/scrollStats"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
