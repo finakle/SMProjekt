@@ -1,8 +1,12 @@
 package com.example.sm_projekt;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -44,7 +48,40 @@ public class AffectedCountries extends AppCompatActivity {
 
         fetchData();
 
+        getSupportActionBar().setTitle("Affected Countries");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        fetchData();
+
+        edtSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                myCustomAdapter.getFilter().filter(s);
+                myCustomAdapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==android.R.id.home)
+            finish();
+        return super.onOptionsItemSelected(item);
+    }
+
     private void fetchData() {
 
         String url  = "https://corona.lmao.ninja/v2/countries/";
@@ -87,10 +124,6 @@ public class AffectedCountries extends AppCompatActivity {
                             simpleArcLoader.setVisibility(View.GONE);
 
 
-
-
-
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                             simpleArcLoader.stop();
@@ -114,3 +147,4 @@ public class AffectedCountries extends AppCompatActivity {
 
     }
 }
+
