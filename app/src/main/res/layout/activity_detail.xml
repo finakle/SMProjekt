@@ -295,4 +295,20 @@
         android:layout_marginRight="20dp"
         />
 
+    <Button
+        android:id="@+id/notify_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/color_one"
+        android:onClick="goTrackCountries"
+        android:padding="5dp"
+        android:text="GET NOTIFY"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
 </LinearLayout>
