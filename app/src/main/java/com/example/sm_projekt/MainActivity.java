@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -123,4 +124,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(),AffectedCountries.class));
 
     }
+
+    public void browser1 (View view) {
+        Intent browserIntent=new Intent (Intent.ACTION_VIEW, Uri.parse("https://www.cdc.gov/coronavirus/2019-ncov/index.html"));
+        startActivity (browserIntent);
+    }
+
 }
