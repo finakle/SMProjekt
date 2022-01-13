@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/color_white"
     android:layout_height="match_parent"
-    tools:context=".AffectedCountries">
+    tools:context=".AffectedCountries"
+    android:background="#000000">
 
     <EditText
         android:layout_width="match_parent"
@@ -21,17 +21,25 @@
         android:drawableLeft="@drawable/ic_search_black_24dp"/>
 
     <ListView
+        android:id="@+id/listView"
+        android:textColor="#ededf2"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/listView"
         android:layout_below="@+id/edtSearch"
-        android:layout_margin="10dp"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#000000"/>
+
     <com.leo.simplearcloader.SimpleArcLoader
+        android:id="@+id/loader"
+        android:textColor="#ededf2"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:id="@+id/loader"
-        app:arc_style="simple_arc"
+        android:layout_centerInParent="true"
+        android:background="#000000"
         android:visibility="visible"
-        android:layout_centerInParent="true"/>
+        app:arc_style="simple_arc" />
 
 </RelativeLayout>
