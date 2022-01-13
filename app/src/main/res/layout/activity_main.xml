@@ -373,36 +373,5 @@
 
     </androidx.cardview.widget.CardView>
 
-
-    <Button
-        android:id="@+id/btnTrack"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="100dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@color/color_one"
-        android:onClick="goTrackCountries"
-        android:padding="5dp"
-        android:text="Track countries"
-        android:textColor="@android:color/white"
-        android:textSize="18sp" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="31dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:background="@color/cases"
-        android:onClick="browser1"
-        android:text="Browser COVID-19" />
-
-
+    <include layout="@layout/two_buttons"/>
 </RelativeLayout>
