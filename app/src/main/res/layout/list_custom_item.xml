@@ -4,12 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:background="#A9A9A9"
     android:layout_margin="5dp">
     <ImageView
         android:layout_width="80dp"
         android:layout_height="55dp"
         android:id="@+id/imageFlag"
         android:padding="5dp"
+
         />
 
     <TextView
