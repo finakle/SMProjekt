@@ -1,15 +1,12 @@
 package com.example.sm_projekt;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -55,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
         fetchData();
 
+
     }
+
 
     private void fetchData() {
 
