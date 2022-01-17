@@ -9,11 +9,11 @@ import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import java.time.Instant;
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,10 +22,9 @@ public class MyCustomAdapter extends ArrayAdapter<CountryModel> {
     private Context context;
     private List<CountryModel> countryModelsList;
     private List<CountryModel> countryModelsListFiltered;
-    private Instant Glide;
 
-    public MyCustomAdapter(Context context, List<CountryModel> countryModelsList) {
-        super(context, R.layout.list_custom_item, countryModelsList);
+    public MyCustomAdapter( Context context, List<CountryModel> countryModelsList) {
+        super(context, R.layout.list_custom_item,countryModelsList);
 
         this.context = context;
         this.countryModelsList = countryModelsList;
@@ -37,7 +36,7 @@ public class MyCustomAdapter extends ArrayAdapter<CountryModel> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_custom_item, null, true);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_custom_item,null,true);
         TextView tvCountryName = view.findViewById(R.id.tvCountryName);
         ImageView imageView = view.findViewById(R.id.imageFlag);
 
@@ -46,7 +45,6 @@ public class MyCustomAdapter extends ArrayAdapter<CountryModel> {
 
         return view;
     }
-
 
     @Override
     public int getCount() {
@@ -105,5 +103,4 @@ public class MyCustomAdapter extends ArrayAdapter<CountryModel> {
         };
         return filter;
     }
-
 }
