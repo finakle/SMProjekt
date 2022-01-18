@@ -316,7 +316,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/color_one"
-        android:onClick="goTrackCountries"
         android:padding="5dp"
         android:text="GET NOTIFY"
         android:textColor="@android:color/white"

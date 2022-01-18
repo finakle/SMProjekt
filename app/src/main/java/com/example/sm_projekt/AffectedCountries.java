@@ -3,11 +3,14 @@ package com.example.sm_projekt;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -20,6 +23,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.leo.simplearcloader.SimpleArcLoader;
 
+import org.eazegraph.lib.models.PieModel;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -46,13 +50,19 @@ public class AffectedCountries extends AppCompatActivity {
         listView = findViewById(R.id.listView);
         simpleArcLoader = findViewById(R.id.loader);
 
-        fetchData();
-
         getSupportActionBar().setTitle("Affected Countries");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         fetchData();
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(getApplicationContext(),DetailActivity.class).putExtra("position",position));
+            }
+        });
+
 
         edtSearch.addTextChangedListener(new TextWatcher() {
             @Override
@@ -74,6 +84,8 @@ public class AffectedCountries extends AppCompatActivity {
             }
         });
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -124,6 +136,10 @@ public class AffectedCountries extends AppCompatActivity {
                             simpleArcLoader.setVisibility(View.GONE);
 
 
+
+
+
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                             simpleArcLoader.stop();
@@ -146,5 +162,6 @@ public class AffectedCountries extends AppCompatActivity {
 
 
     }
+
 }
 
